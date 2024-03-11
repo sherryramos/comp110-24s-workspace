@@ -74,3 +74,4 @@ def create(list1: str, list2: str) -> list[str]:
 
 print(create("Hello", "World"))
 x: list[str] = create("World", "Hello")
+print(x)
