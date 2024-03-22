@@ -54,7 +54,10 @@ def alphabetizer(list1: list[str]) -> dict[str, list[str]]:
 def update_attendance(dict1: dict[str, list[str]], day: str, student: str) -> None:
     """Given a log(dict), day(str), and name(str), updates attendance!"""
     if day in dict1:  # if day is already logged
-        dict1[day] += {student}  # adds student to day
+        if not (student in dict1[day]):
+            dict1[day] += {student}  # adds student to day
     else:
         dict1[day] = [student]  # creates day and adds student
     return None
+
+alphabetizer(["apple", "adam", "ball"])
